@@ -3,7 +3,8 @@ var app = new Vue({
   data: {
     listItem: ["Studiare Vue","Ripassare Javascript","Tornare a studiare Vue"],
     newItem: "",
-    done: ""
+    done: "",
+    color: "white"
   },
   methods: {
     addNewItem: function() {
@@ -25,6 +26,18 @@ var app = new Vue({
       } else if (this.done == "done") {
         this.done = "";
       }
+    },
+    whiteColor: function() {
+      this.color = "white";
+    },
+    bisqueColor: function() {
+      this.color = "bisque";
+    },
+    lightSteelBlueColor: function() {
+      this.color = "lightsteelblue";
+    },
+    indianRedColor: function() {
+      this.color = "indianRed";
     }
   }
 });

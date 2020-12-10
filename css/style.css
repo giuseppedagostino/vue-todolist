@@ -10,28 +10,82 @@ body {
   font-size: 24px;
   font-weight: 300;
   background-color: black;
-  /* flex */
   display: flex;
 }
 h1 {
   font-size: 48px;
 }
-.card {
-  box-shadow: 0 6px 12px 0 grey;
-}
 .done {
   text-decoration: line-through;
   opacity: 0.75;
 }
+.white {
+  border: 2px solid white;
+  color: white;
+  box-shadow: 0 6px 12px 0 white;
+}
+.bisque {
+  border: 2px solid bisque;
+  color: bisque;
+  box-shadow: 0 6px 12px 0 bisque;
+}
+.lightsteelblue {
+  border: 2px solid lightsteelblue;
+  color: lightsteelblue;
+  box-shadow: 0 6px 12px 0 lightsteelblue;
+}
+.indianRed {
+  border: 2px solid indianred;
+  color: indianRed;
+  box-shadow: 0 6px 12px 0 indianred;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+#colors{
+  display: flex;
+}
+#colors button {
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 20px;
+  background-color: transparent;
+}
+#colors button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+#colors button:nth-of-type(1) {
+  color: white;
+  border: 2px solid white;
+  box-shadow: 0 6px 12px 0 white;
+}
+#colors button:nth-of-type(2) {
+  color: bisque;
+  border: 2px solid bisque;
+  box-shadow: 0 6px 12px 0 bisque;
+}
+#colors button:nth-of-type(3) {
+  color: lightsteelblue;
+  border: 2px solid lightsteelblue;
+  box-shadow: 0 6px 12px 0 lightsteelblue;
+}
+#colors button:nth-of-type(4) {
+  color: indianred;
+  border: 2px solid indianred;
+  box-shadow: 0 6px 12px 0 indianred;
+}
 
 #root {
-  width: 60%;
+  width: 70%;
   margin: auto;
-  font-size: 24px;
   /* flex */
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 #input_section {
   width: 100%;
@@ -39,11 +93,9 @@ h1 {
   display: flex;
 }
 
-input, button {
+#input_section input, #input_section button {
   padding: 15px;
   font-size: 24px;
-  color: white;
-  border: 2px solid white;
   border-radius: 20px;
   background-color: transparent;
 }
@@ -51,13 +103,18 @@ input {
   width: 100%;
   margin-right: 30px;
 }
+input:focus, button:focus {
+  outline: none;
+}
 input:hover {
   cursor: pointer;
   transform: scale(1.05);
+  transition: 0.2s;
 }
 button:hover {
   cursor: pointer;
   transform: scale(1.1);
+  transition: 0.2s;
 }
 ul {
   list-style: none;
@@ -65,7 +122,7 @@ ul {
   width: 100%;
 }
 li {
-  margin: 15px 0;
+  margin: 20px 0;
   padding: 15px;
   border: 2px solid white;
   border-radius: 20px;
@@ -78,6 +135,7 @@ li:hover {
   font-weight: 600;
   color: black;
   background-color: white;
+  transition: 0.4s;
 }
 li i {
   font-size: 32px;

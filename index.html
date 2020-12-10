@@ -17,14 +17,23 @@
   <body>
 
     <div id="root">
-      <h1>vue-todolist</h1>
+      <header>
+        <h1>vue-todolist</h1>
+        <div id="colors">
+          <button type="button" @click="whiteColor">White</button>
+          <button type="button" @click="bisqueColor">Bisque</button>
+          <button type="button" @click="lightSteelBlueColor">Light Steel Blue</button>
+          <button type="button" @click="indianRedColor">Indian Red</button>
+        </div>
+      </header>
+
       <div id="input_section">
-        <input class="card" type="text" v-model="newItem" placeholder="scrivi qui" @keydown.13="addNewItem">
-        <button class="card" type="button" @click="addNewItem">Aggiungi</button>
+        <input :class="color" type="text" v-model="newItem" placeholder="scrivi qui" @keydown.13="addNewItem">
+        <button :class="color" type="button" @click="addNewItem">Aggiungi</button>
       </div>
 
       <ul>
-        <li class="card" :class="done" v-for="(item, index) in listItem">
+        <li :class="color" :class="done" v-for="(item, index) in listItem">
           {{ item }}
           <div>
             <i class="fas fa-times-circle" @click="removeItem(index)"></i>
