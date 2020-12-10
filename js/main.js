@@ -20,7 +20,7 @@ var app = new Vue({
       console.log("collegato");
       this.listItem.splice(index, 1);
     },
-    doneItem: function() {
+    doneItem: function(index) {
       if (this.done == "") {
         this.done = "done";
       } else if (this.done == "done") {
