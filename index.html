@@ -6,7 +6,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <!-- font google -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Rubik:wght@400;600&display=swap" rel="stylesheet">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css" integrity="sha512-f73UKwzP1Oia45eqHpHwzJtFLpvULbhVpEJfaWczo/ZCV5NWSnK4vLDnjTaMps28ocZ05RbI83k2RlQH92zy7A==" crossorigin="anonymous" />
     <!-- css -->
@@ -15,16 +15,21 @@
   </head>
 
   <body>
-    <h1>vue-todolist</h1>
 
     <div id="root">
-      <input type="text" v-model="newItem" placeholder="scrivi qui" @keydown.13="addNewItem">
-
-      <button type="button" @click="addNewItem">Aggiungi</button>
+      <h1>vue-todolist</h1>
+      <div id="input_section">
+        <input class="card" type="text" v-model="newItem" placeholder="scrivi qui" @keydown.13="addNewItem">
+        <button class="card" type="button" @click="addNewItem">Aggiungi</button>
+      </div>
 
       <ul>
-        <li v-for="(item, index) in listItem">
-          <i class="fas fa-times-circle" @click="removeItem(index)"></i>{{ item }}
+        <li class="card" v-for="(item, index) in listItem">
+          {{ item }}
+          <div>
+            <i class="fas fa-times-circle" @click="removeItem(index)"></i>
+            <i class="fas fa-check-circle"></i>
+          </div>
         </li>
       </ul>
     </div>

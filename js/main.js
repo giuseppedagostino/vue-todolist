@@ -1,6 +1,3 @@
-// Bonus:
-// - Oltre al click sul pulsante, consentire l'inserimento del nuovo item anche premendo il tasto Invio della tastiera, dopo aver scritto il testo nel campo di input.
-
 var app = new Vue({
   el: "#root",
   data: {

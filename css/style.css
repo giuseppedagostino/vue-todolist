@@ -5,40 +5,86 @@
   font-family: 'Montserrat', sans-serif;
 }
 body {
-  padding: 50px;
+  padding-top: 50px;
   color: white;
+  font-size: 24px;
+  font-weight: 300;
   background-color: black;
+  /* flex */
+  display: flex;
 }
 h1 {
   font-size: 48px;
 }
+.card {
+  box-shadow: 0 6px 12px 0 grey;
+}
 
 #root {
+  width: 60%;
+  margin: auto;
   font-size: 24px;
-  /* background-color: coral; */
+  /* flex */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+#input_section {
+  width: 100%;
+  margin: 30px 0;
+  display: flex;
+}
+
 input, button {
   padding: 15px;
-  margin: 20px 20px 20px 0;
   font-size: 24px;
   color: white;
   border: 2px solid white;
   border-radius: 20px;
   background-color: transparent;
 }
-input:hover, button:hover {
+input {
+  width: 100%;
+  margin-right: 30px;
+}
+input:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+button:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
 ul {
   list-style: none;
+  align-self: flex-start;
+  width: 100%;
 }
 li {
-  margin: 10px 0;
+  margin: 15px 0;
+  padding: 15px;
+  border: 2px solid white;
+  border-radius: 20px;
+  /* flex */
+  display: flex;
+  justify-content: space-between;
 }
-i {
-  color: red;
-  margin-right: 10px;
+li:hover {
+  transform: scale(1.025);
+  font-weight: 600;
+  color: black;
+  background-color: white;
+}
+li i {
+  font-size: 32px;
+}
+li i:nth-of-type(1) {
+ margin-left: 20px;
+ color: red;
+}
+li i:nth-of-type(2) {
+ margin-left: 10px;
+ color: forestgreen;
 }
 i:hover {
   cursor: pointer;
