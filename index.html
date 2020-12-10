@@ -24,11 +24,12 @@
       </div>
 
       <ul>
-        <li class="card" v-for="(item, index) in listItem">
+        <li class="card" :class="done" v-for="(item, index) in listItem">
           {{ item }}
           <div>
             <i class="fas fa-times-circle" @click="removeItem(index)"></i>
-            <i class="fas fa-check-circle"></i>
+            <!-- aggiungo qua -->
+            <i class="fas fa-check-circle" @click="doneItem"></i>
           </div>
         </li>
       </ul>

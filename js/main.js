@@ -3,6 +3,7 @@ var app = new Vue({
   data: {
     listItem: ["Studiare Vue","Ripassare Javascript","Tornare a studiare Vue"],
     newItem: "",
+    done: ""
   },
   methods: {
     addNewItem: function() {
@@ -17,6 +18,13 @@ var app = new Vue({
     removeItem: function(index) {
       console.log("collegato");
       this.listItem.splice(index, 1);
+    },
+    doneItem: function() {
+      if (this.done == "") {
+        this.done = "done";
+      } else if (this.done == "done") {
+        this.done = "";
+      }
     }
   }
 });
