@@ -18,9 +18,9 @@
     <h1>vue-todolist</h1>
 
     <div id="root">
-      <input type="text" v-model="newItem" placeholder="scrivi qui">
+      <input type="text" v-model="newItem" placeholder="scrivi qui" @keydown.13="addNewItem">
 
-      <button type="button" @click="printNewItem">Aggiungi</button>
+      <button type="button" @click="addNewItem">Aggiungi</button>
 
       <ul>
         <li v-for="(item, index) in listItem">
