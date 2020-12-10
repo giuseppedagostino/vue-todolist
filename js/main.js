@@ -7,6 +7,11 @@ var app = new Vue({
   el: "#root",
   data: {
     listItem: ["Cose da fare 1","Cose da fare 2","Cose da fare 3"],
+    newItem: "",
   },
-  methods: {},
+  methods: {
+    printNewItem: function() {
+      console.log(this.newItem);
+    },
+  }
 });

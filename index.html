@@ -18,8 +18,10 @@
     <h1>vue-todolist</h1>
 
     <div id="root">
-      <!-- <input type="text" placeholder="scrivi qui">
-      <button type="button">Aggiungi</button> -->
+      <input type="text" v-model="newItem" placeholder="scrivi qui">
+
+      <button type="button" @click="printNewItem">Aggiungi</button>
+
       <ul>
         <li v-for="item in listItem">{{ item }}</li>
       </ul>
