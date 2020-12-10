@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <!-- vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    <!-- js -->
-    <script src="js/main.js" charset="utf-8"></script>
     <!-- font google -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -18,5 +16,16 @@
 
   <body>
     <h1>vue-todolist</h1>
+
+    <div id="root">
+      <!-- <input type="text" placeholder="scrivi qui">
+      <button type="button">Aggiungi</button> -->
+      <ul>
+        <li v-for="item in listItem">{{ item }}</li>
+      </ul>
+    </div>
+
+    <!-- js -->
+    <script src="js/main.js" charset="utf-8"></script>
   </body>
 </html>
