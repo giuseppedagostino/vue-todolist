@@ -18,8 +18,9 @@ var app = new Vue({
         alert("Devi inserire un valore corretto.")
       }
     },
-    removeItem: function() {
+    removeItem: function(index) {
       console.log("collegato");
+      this.listItem.splice(index, 1);
     }
   }
 });
