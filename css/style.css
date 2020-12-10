@@ -36,3 +36,11 @@ ul {
 li {
   margin: 10px 0;
 }
+i {
+  color: red;
+  margin-right: 10px;
+}
+i:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}

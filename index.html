@@ -23,7 +23,9 @@
       <button type="button" @click="printNewItem">Aggiungi</button>
 
       <ul>
-        <li v-for="item in listItem">{{ item }}</li>
+        <li v-for="item in listItem">
+          <i class="fas fa-times-circle" @click="removeItem"></i>{{ item }}
+        </li>
       </ul>
     </div>
 
