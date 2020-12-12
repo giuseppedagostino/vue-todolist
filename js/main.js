@@ -20,13 +20,18 @@ var app = new Vue({
       console.log("collegato");
       this.listItem.splice(index, 1);
     },
-    doneItem: function(index) {
-      if (this.done == "") {
+
+    doneItem: function(indexDone) {
+      console.log("collegato Done " + indexDone);
+      if (this.done[indexDone] == "") {
+        console.log("Si");
         this.done = "done";
-      } else if (this.done == "done") {
+      } else {
+        console.log("No");
         this.done = "";
       }
     },
+
     whiteColor: function() {
       this.color = "white";
     },

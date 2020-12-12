@@ -16,8 +16,7 @@ h1 {
   font-size: 48px;
 }
 .done {
-  text-decoration: line-through;
-  opacity: 0.75;
+  opacity: 0.5;
 }
 .white {
   border: 2px solid white;
